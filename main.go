@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	models.Personalitys = []models.Personality{{Name: "teste", History: "2"}, {Name: "teste 2", History: "3"}}
+	models.Personalitys = []models.Personality{{Id: 1, Name: "teste", History: "2"}, {Id: 1, Name: "teste 2", History: "3"}}
 	routes.HandleRequest()
 }

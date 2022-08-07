@@ -10,7 +10,7 @@ import (
 
 func HandleRequest() {
 	r := mux.NewRouter()
-	r.HandleFunc("/", controller.Home)
-	r.HandleFunc("/api/personalities", controller.GetAllPersonalities)
+	r.HandleFunc("/", controller.Home).Methods("GET")
+	r.HandleFunc("/api/personalities", controller.GetAllPersonalities).Methods("GET")
 	log.Fatal(http.ListenAndServe(":8080", r))
 }
